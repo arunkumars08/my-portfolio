@@ -10,6 +10,10 @@ body {
     font-family: 'LatoLight';
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 100;
+}
+
 .container {
     width: 60%;
     margin: 0 auto;
@@ -73,7 +77,7 @@ nav ul li {
     width: 100%;
     text-align: center;
     color: #D0DADC;
-    
+    transition: all 0.5s ease 0.5s;
 }
 
 .menu-left {
@@ -111,6 +115,7 @@ nav ul li {
     font-size: 12px;
     letter-spacing: 1px;
     font-weight: 700;
+    width: 85%;
 }
 
 .section-title:before {
@@ -128,4 +133,90 @@ nav ul li {
     display: inline-block;
     padding-right: 1.4em;
     background: #fff;
+}
+.message {
+    padding: 10px;
+    width: 80%;
+}
+
+.message h2 {
+    margin: 15px 0;
+}
+
+.change-words .word {
+    position: absolute;
+    opacity: 0;
+}
+
+.word {
+    font-weight: 800;
+    letter-spacing: -1px;
+    padding: 1px 0 0 0;
+    font-family: Helvetica;
+}
+
+.change-words .word:first-child {
+    opacity: 1;
+}
+
+.word.show {
+    animation: showWord .5s linear forwards;
+}
+
+.word.hide {
+    animation: hideWord .5s linear forwards;
+}
+
+@keyframes showWord {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes hideWord {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+}
+
+.section-container {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    overflow: hidden;
+    min-height: 100%;
+}
+.section-container section {
+    width: 80%;
+    display: inline-block;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 10%;
+    visibility: hidden;
+    transition: all 0.5s ease 0.5s;
+}
+
+.section-container section.active {
+    visibility: visible;
+}
+
+.section-container section.left {
+    left: 100%;
+    visibility: visible;
+}
+
+.section-container section.right {
+    left: 100%;
+    visibility: visible;
 }
