@@ -8,6 +8,7 @@ body {
     padding: 0;
     background: #fff;
     font-family: 'LatoLight';
+    overflow-y: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -78,6 +79,7 @@ nav ul li {
     text-align: center;
     color: #D0DADC;
     transition: all 0.5s ease 0.5s;
+    cursor: pointer;
 }
 
 .menu-left {
@@ -115,7 +117,7 @@ nav ul li {
     font-size: 12px;
     letter-spacing: 1px;
     font-weight: 700;
-    width: 85%;
+    margin-top: 2em;
 }
 
 .section-title:before {
@@ -193,7 +195,6 @@ nav ul li {
     position: absolute;
     width: 100%;
     left: 0;
-    overflow: hidden;
     min-height: 100%;
 }
 .section-container section {
@@ -205,6 +206,7 @@ nav ul li {
     left: 10%;
     visibility: hidden;
     transition: all 0.5s ease 0.5s;
+    padding-bottom: 50px;
 }
 
 .section-container section.active {
@@ -212,11 +214,188 @@ nav ul li {
 }
 
 .section-container section.left {
-    left: 100%;
-    visibility: visible;
+    left: 110%;
+    visibility: hidden;
 }
 
 .section-container section.right {
-    left: 100%;
-    visibility: visible;
+    left: 110%;
+    visibility: hidden;
+}
+
+.timeline {
+    border: 2px solid #F4F6F7;
+    margin: -20px 0 0 25px;
+    border-width: 0;
+    border-left-width: 4px;
+    padding: 10px;
+}
+
+.left-pane, .right-pane {
+    float: left;
+}
+
+.left-pane {
+    width: 60%;
+}
+
+.right-pane {
+    width: 40%;
+}
+
+.event {
+    margin-top: 30px;
+    padding: 20px 0 20px 0;
+    display: table;
+    width: 100%;
+    position: relative;
+}
+
+.event .when {
+    font-size: 15px;
+    color: #fff;
+    display: table-cell;
+    vertical-align: middle;
+    position: relative; 
+    left: -50px;
+}
+
+.event .when span {
+    background: #3C95AD;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    display: inline-block;
+    line-height: 70px;
+}
+
+.current .when span {
+    background: #345;
+}
+
+.event .what {
+    border: 3px solid #EDF1F3;
+    width: 90%;
+    left: -30px;
+    display: table-cell;
+    position: relative;
+    padding: 20px;
+}
+
+.what .company {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    color: #ccc;
+    font-weight: bold;
+}
+
+.what .title {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0;
+    margin: 5px 0;
+}
+
+.what .description {
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 25px;
+    color: #555;
+}
+
+.when span:after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border: 3px solid #EDF1F3;
+    display: block;
+    position: absolute;
+    top: 47%;
+    right: -30px;
+    transform: rotate(45deg);
+    border-right-width: 0;
+    border-top-width: 0;
+    background: #fff;
+    z-index: 99;
+}
+
+.cancel-mid-line .section-title::before {
+    content: unset;
+}
+
+.progress-meter {
+    padding: 10px;
+    background: #3C95AD;
+    color: #fff;
+    margin: 20px 10px 20px 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.width-10 {
+    width: 10%;
+}
+
+.width-20 {
+    width: 20%;
+}
+
+.width-30 {
+    width: 30%;
+}
+
+.width-40 {
+    width: 40%;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.width-60 {
+    width: 60%;
+}
+
+.width-70 {
+    width: 70%;
+}
+
+.width-80 {
+    width: 80%;
+}
+
+.width-90 {
+    width: 90%;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.testimonial {
+    padding: 20px;
+    line-height: 25px;
+    background: #F9F9F9;
+    margin: 10px;
+}
+
+.button {
+    padding: 5px 10px;
+    border: 0;
+    background: #fff;
+    cursor: pointer;
+    border: 1px solid #eaeaea;
+    transition: all 0.2s ease 0.2s;
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.button:hover {
+    border: 0;
+    background: #3C95AD;
+    color: #fff;
 }
